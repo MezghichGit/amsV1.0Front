@@ -9,17 +9,27 @@ import { Router } from '@angular/router';
 export class ProviderAddComponent implements OnInit {
 
   provider: any;
+  selectedFile: File;
+  retrievedImage: any;
+  base64Data: any;
+  retrieveResonse: any;
+  message: string;
   constructor(private service: ProviderService, private router: Router) { }
 
   ngOnInit(): void {
   }
   createProvider(myform) {
+    console.log(this.selectedFile);
     this.service.createProvider(myform).subscribe(
       response => {
         console.log(response);
         this.router.navigate(['providerList']);
       }
     );
+  }
+  public onFileChanged(event) {
+    //Select File
+    this.selectedFile = event.target.files[0];
   }
 
 }
