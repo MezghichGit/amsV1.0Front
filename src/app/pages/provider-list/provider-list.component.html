@@ -115,6 +115,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">Adress</th>
                 <th scope="col">Email</th>
+                <th scope="col">Logo</th>
                 <th scope="col">Modification</th>
                 <th scope="col">Suppression</th>
               </tr>
@@ -125,6 +126,7 @@
                 <td>{{provider.name}}</td>
                 <td>{{provider.address}}</td>
                 <td>{{provider.email}}</td>
+                <td><img src="http://127.0.0.1:8080/uploads/{{provider.nomImage}}" width="20%"/></td>
                 <td><button (click)="updateProvider(provider)" class="btn btn-warning">Modifier</button></td>
                 <td><button (click)="deleteProvider(provider)" class="btn btn-danger">Supprimer</button></td>
 

@@ -128,6 +128,16 @@
               <input [(ngModel)]="adress" name="providerAdress" class="form-control" placeholder="Adress" type="text">
             </div>
           </div>
+          Provide picture : <img src="http://127.0.0.1:8080/uploads/{{nomImage}}" width="20%"/>
+          <br/>
+          <div class="form-group">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="ni ni-square-pin"></i></span>
+              </div>
+              <input ngModel name="providerImage" class="form-control" placeholder="Image" type="file" (change)="onFileChanged($event)">
+            </div>
+          </div>
 
           <div class="text-center">
             <button type="submit" class="btn btn-primary mt-4">Mise à jour</button>
